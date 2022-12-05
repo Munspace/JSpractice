@@ -14,15 +14,41 @@ console.log('f')
 function SP() {
     let a = Number(dlinaA.value)
     let b = Number(dlinaB.value)
+    let c
+    let d
     const massiv = []
-
-    for (let i = 1; i <= a; i++) {
-        delitelA = a/i
-        delitelB = b/i
+    let key = true
+    switch (key) {
+        case a > b && b > 0:
+            c = -b
+            d = a
+            break;
+        case a > b && b < 0:
+            c = b
+            d = a
+            break;
+        case a < b && a > 0:
+            c = -a
+            d = b
+            break;
+        case a < b && a < 0:
+            c = a
+            d = b
+            break;
+        default:
+            c = a
+            d = b
+            break;
+    }
+    console.log(c)
+    console.log(d)
+    for (let i = c; i <= d; i++) {
+        delitelA = c/i
+        delitelB = d/i
         if (Number.isInteger(delitelA) && Number.isInteger(delitelB)) {
             massiv.push(i)
         }
-    result.innerHTML = `общих делителей - ${massiv.length} <br/> самый большой делитель - ${Math.max.apply(null, massiv)}` //Math.max(...massiv)
+    result.innerHTML = `общих делителей - ${massiv.length} <br/> самый маленький делитель - ${Math.min.apply(null, massiv)}` //Math.max(...massiv)
     }
 
 }
