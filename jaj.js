@@ -22,9 +22,9 @@ function SP() {
         if (Number.isInteger(delitelA) && Number.isInteger(delitelB)) {
             massiv.push(i)
         }
-    result.innerHTML = `общих делителей - ${massiv.length} <br/> общие делители - ${massiv}`
+    result.innerHTML = `общих делителей - ${massiv.length} <br/> самый большой делитель - ${Math.max.apply(null, massiv)}` //Math.max(...massiv)
     }
-    
+
 }
 
 buttonResult.addEventListener('click', SP);
