@@ -13,14 +13,16 @@ console.log('f')
 // Number(dlinaC.value)
 function SP() {
     let a = Number(dlinaA.value)
+    let b = Number(dlinaB.value)
     const massiv = []
+
     for (let i = 1; i <= a; i++) {
-        let b = a/i
-        if (Number.isInteger(b)) {
-            massiv.push(b)
-            
+        delitelA = a/i
+        delitelB = b/i
+        if (Number.isInteger(delitelA) && Number.isInteger(delitelB)) {
+            massiv.push(i)
         }
-    result.innerHTML = `делителей - ${massiv.length} <br/> делители ${massiv}`
+    result.innerHTML = `общих делителей - ${massiv.length} <br/> общие делители - ${massiv}`
     }
     
 }
